@@ -1,0 +1,35 @@
+@import"https://fonts.googleapis.com/css?family=Comfortaa:300,400,700";
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #ecf0f1;
+    font-family: "Comfortaa", cursive;
+}
+
+.container {
+    color: #333;
+    text-align: center;
+    margin-top: 150px;
+}
+
+h1 {
+    font-weight: normal;
+}
+
+li {
+    display: inline-block;
+    font-size: 1.5em;
+    list-style-type: none;
+    padding: 1em;
+    text-transform: uppercase;
+}
+
+li span {
+    display: block;
+    font-size: 4.5rem;
+}
