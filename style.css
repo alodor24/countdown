@@ -1,35 +1,58 @@
-@import"https://fonts.googleapis.com/css?family=Comfortaa:300,400,700";
+body {
+    background-color: #ecf0f1;
+}
 
-* {
-    box-sizing: border-box;
-    margin: 0;
+.sidebar {
+    background-color: #17202a;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+}
+
+.sidebar h2 {
+    text-align: center;
+    color: #fff;
+}
+
+.sidebar #date {
+    margin-bottom: 15px;
+}
+
+.container-countdown {
+    margin-top: 15%;
+    text-align: center;
+}
+
+.container-countdown ul {
+    list-style: none;
     padding: 0;
 }
 
-body {
-    background-color: #ecf0f1;
-    font-family: "Comfortaa", cursive;
-}
-
-.container {
-    color: #333;
-    text-align: center;
-    margin-top: 150px;
-}
-
-h1 {
-    font-weight: normal;
-}
-
-li {
+.container-countdown ul li {
     display: inline-block;
-    font-size: 1.5em;
-    list-style-type: none;
-    padding: 1em;
-    text-transform: uppercase;
+    padding: 0 15px;
 }
 
-li span {
+.container-countdown ul li span {
     display: block;
-    font-size: 4.5rem;
+    font-size: 3em;
 }
+
+@media(max-width: 767px) {
+    .sidebar {
+        position: relative;
+    }    
+    
+    .container-countdown ul li {
+        padding: 0 5px;
+    }
+
+    .container-countdown ul li span {
+        font-size: 2em;
+    }
+} 

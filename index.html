@@ -2,21 +2,40 @@
 <html lang="es">
     <head>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link rel="stylesheet" href="style.css">
         <title>Countdown - Happy Birthday</title>
     </head>
     
     <body>
         <div class="container">
-            <h1 id="head">Countdown to my birthday:</h1>
-            <ul>
-                <li><span id="days"></span>days</li>
-                <li><span id="hours"></span>Hours</li>
-                <li><span id="minutes"></span>Minutes</li>
-                <li><span id="seconds"></span>Seconds</li>
-            </ul>
+            <aside class="sidebar">
+                <div>
+                    <h2>Choose a date</h2>
+                
+                    <div class="form-group">
+                        <input id="date" class="form-control" type="date">
+                        <button id="accept" class="btn btn-primary">To accept</button>
+                    </div>
+                </div>                
+            </aside>
+            
+            <section class="row">
+                <div class="col-sm-8 offset-sm-4 container-countdown">
+                    <h1>Countdown to my birthday</h1>
+                    
+                    <ul>
+                        <li><span id="days"></span>Days</li>
+                        <li><span id="hours"></span>Hours</li>
+                        <li><span id="minutes"></span>Minutes</li>
+                        <li><span id="seconds"></span>Seconds</li>
+                    </ul>
+                </div>                            
+            </section>
         </div>
         
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
         <script src="function.js"></script>
     </body>
 </html>
