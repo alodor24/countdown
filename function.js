@@ -65,7 +65,7 @@ $(document).ready(() => {
         // Launch function
         let getDateTime = setDate(days, month, year)        
         config_interval(getDateTime)
-    })    
+    })  
 })
 
 
@@ -90,16 +90,20 @@ function config_interval(getDateTime) {
         let now = new Date().getTime()
         let distance = getDateTime - now
 
+        // Stop countDown if interval is 0
         if (distance < 0) {
            clearInterval(interval)
         }
+          
+        // Stop countDown if press reset button
+        $('#reset').click(() => {
+            clearInterval(interval)
+        })
 
         document.getElementById('days').innerText = Math.floor(distance / (day)),
         document.getElementById('hours').innerText = Math.floor((distance % (day)) / (hour)),
         document.getElementById('minutes').innerText = Math.floor((distance % (hour)) / (minute)),
         document.getElementById('seconds').innerText = Math.floor((distance % (minute)) / second)
 
-    }, second)   
-    
-    return interval
+    }, second)
 }
